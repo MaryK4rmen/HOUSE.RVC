@@ -1,0 +1,104 @@
+/* Reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffffff); /* suave azul pastel */
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sección principal dividida en dos columnas */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  max-width: 1100px;
+  gap: 50px;
+}
+
+/* Columna izquierda: logo */
+.izquierda {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 450px;
+  height: auto;
+  filter:(0 4px 8px rgba(0,0,0,0.1));
+}
+
+/* Columna derecha: texto */
+.derecha {
+  flex: 1.2;
+  text-align: left;
+}
+
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #28f1ff;
+  margin-bottom: 20px;
+}
+
+/* Caja de descripción */
+.descripcion {
+  background: rgb(255, 255, 255);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.descripcion p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+}
+
+/* Botón */
+.boton {
+  display: inline-block;
+  background-color:#28f1ff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #1e758b;
+  transform: scale(1.05);
+}
+
+/* Responsivo (para celulares) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .izquierda, .derecha {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
